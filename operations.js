@@ -3,9 +3,9 @@ exports.insertDocument = (db, document, nameCollection) => {
   return collection.insertOne(document);
 };
 
-exports.findsDocuments = (db, nameCollection) => {
+exports.findDocuments = (db, nameCollection) => {
   const collection = db.collection(nameCollection);
-  return collection.findOne({}).toArray();
+  return collection.find({}).toArray();
 };
 
 exports.removeDocument = (db, document, nameCollection) => {
