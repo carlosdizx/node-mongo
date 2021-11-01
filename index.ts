@@ -28,7 +28,13 @@ MongoClient.connect(url, (err, client) => {
         db.dropCollection("dishes", (err, result) => {
           assert.equal(err, null);
 
-          client.close().then(r => console.log("xd"));
+          client
+            .close()
+            .then((r) =>
+              console.log(
+                r ? r : "\n" + result ? "Eliminada coleccion" : "No se pudo eliminar"
+              )
+            );
         });
       });
     }
