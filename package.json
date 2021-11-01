@@ -4,7 +4,8 @@
   "description": "Node MongoDB Example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/carlosdizx/node-mongo/issues"
   },
-  "homepage": "https://github.com/carlosdizx/node-mongo#readme"
+  "homepage": "https://github.com/carlosdizx/node-mongo#readme",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "mongodb": "^4.1.3",
+    "prettier": "^2.4.1"
+  }
 }
