@@ -15,10 +15,10 @@ MongoClient.connect(url, (err, client) => {
     { name: "Vadonut", description: "Test" },
     "dishes",
     (result) => {
-      console.log("Inserted document:\n" + result);
+      console.log(result);
 
       dboperations.findsDocuments(db, "dishes", (docs) => {
-        console.log("Found documents:\n" + docs);
+        console.log(docs);
 
         dboperations.updateDocument(
           db,
@@ -26,10 +26,10 @@ MongoClient.connect(url, (err, client) => {
           { description: "Updated test" },
           "dishes",
           (result) => {
-            console.log("The document was successfully updated " + result);
+            console.log(result);
 
-            dboperations.findsDocuments(db, "dishes", (docs) => {
-              console.log("Found documents:\n" + docs);
+              dboperations.findsDocuments(db, "dishes", (docs) => {
+                  console.log(docs);
 
               db.dropCollection("dishes", (err, result) => {
                 assert.equal(err, null);
