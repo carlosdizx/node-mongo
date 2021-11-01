@@ -32,7 +32,7 @@ MongoClient.connect(url, (err, client) => {
             .close()
             .then((r) =>
               console.log(
-                r ? r : "\n" + result ? "Eliminada coleccion" : "No se pudo eliminar"
+                r ? r : "\n" + result ? "Eliminada coleccion" : "No se pudo eliminar coleccion"
               )
             );
         });
